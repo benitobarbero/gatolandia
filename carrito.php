@@ -53,7 +53,22 @@ if (isset($_SESSION['datos'])!=null)
         
         
         <div class="container">
-            Carrito html
+            <div id="cabeceraCarrito"></div>
+            
+            
+            <table style="width: 100%">
+            <tr>
+               <th>Articulo</th>
+               <th>Cantidad</th>
+               <th>Precio total</th>
+             </tr>
+             <div id="cuerpoCarrito">
+             <tr>
+                 <td rowspan="3">Todavia no tiene ningun articulo en la lista</td>
+       
+             </tr>
+             </div>
+             </table>
         </div>
         
         
@@ -64,10 +79,32 @@ if (isset($_SESSION['datos'])!=null)
             
            var arrayJS=<?php echo json_encode($datos);?>;
 
-           escribirDatos();
 
+          if(arrayJS[0]!=null){
+           escribirDatos();
+           escribirCarrito();
+       }
 
     
+    
+    function escribirCarrito(){
+        $('cabeceraCarrito').html("Bienvenido "+arrayJS[0]+" aqui tiene sus articulos");
+        
+        
+        if(arrayJS[1]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 1</td><td>"+arrayJS[1]+"</td><td>"+(arrayJS[1]*30)+"</td></tr>");
+        if(arrayJS[2]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 2</td><td>"+arrayJS[2]+"</td><td>"+(arrayJS[2]*30)+"</td></tr>");
+        if(arrayJS[3]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 3</td><td>"+arrayJS[3]+"</td><td>"+(arrayJS[3]*30)+"</td></tr>");
+        if(arrayJS[4]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 4</td><td>"+arrayJS[4]+"</td><td>"+(arrayJS[4]*30)+"</td></tr>");
+        if(arrayJS[5]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 5</td><td>"+arrayJS[5]+"</td><td>"+(arrayJS[5]*30)+"</td></tr>");
+        if(arrayJS[6]!=0)
+        $('cuerpoCarrito').html(" <tr><td>Articulo 6</td><td>"+arrayJS[6]+"</td><td>"+(arrayJS[6]*30)+"</td></tr>");
+    
+    }
     function escribirDatos(){
         if(arrayJS[0]!=null){
             var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];

@@ -68,17 +68,17 @@ if (isset($_SESSION['datos'])!=null)
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><button onclick="compraArticulo(1)" class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
                     </div>
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><button onclick="compraArticulo(2)" class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
                     </div>
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><button onclick="compraArticulo(3)" class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
                     </div>
 
 
@@ -96,17 +96,17 @@ if (isset($_SESSION['datos'])!=null)
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick="compraArticulo(4)">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
                     </div>
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick="compraArticulo(5)">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
                     </div>
                     <div class="col-md-4  productbox">
                         <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
                         <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick="compraArticulo(6)">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
                     </div>
 
 
@@ -114,7 +114,30 @@ if (isset($_SESSION['datos'])!=null)
                 <div class="col-md-2"></div>
    
             </div>
+            
+            
+                        <!-- Modal -->
+             <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     
+                     <h4 class="modal-title">Usuario no registrado</h4>
+                   </div>
+                   <div class="modal-body">
+                     <p>Lo lamentamos, para poder realizar compras, debe estar registrado</p>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
  
+                        <div id="pruebafuncion"></div>
             
             
             
@@ -124,17 +147,29 @@ if (isset($_SESSION['datos'])!=null)
         
         
         
-         <script type="text/javascript">
-            
+         <script>
+             
+            if(<?php echo json_encode($datos);?>!=null){
            var arrayJS=<?php echo json_encode($datos);?>;
-
+        }
            escribirDatos();
 
-  
+        
 
  
     
-    
+    function compraArticulo(numero){
+        
+        if(arrayJS[0]===null){
+             $('#myModal').modal('show'); 
+             $('#pruebafuncion').html("<h1> Lo lamentamos, pero debe estar registrado para poder hacer compras </h1>");
+        }else{
+            arrayJS[numero]=arrayJS[numero]+1;
+            $('#pruebafuncion').html("<h1> Agregada una unidad al carrito </h1>"); 
+            escribirDatos();
+        }
+        
+    }
     function escribirDatos(){
         if(arrayJS[0]!=null){
             var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];

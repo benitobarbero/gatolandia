@@ -57,60 +57,7 @@ if (isset($_SESSION['datos'])!=null)
         <div class="container">
  
             
-            <!-- PRIMERA FILA-->
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-
-
-                </div>
-                <div class="col-md-2"></div>
-   
-            </div>
-            
-            
-            <!-- SEGUNDA FILA-->
-                        <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">COMPRAR</a></div><div class="pricetext">30,00€</div></div>
-                    </div>
-
-
-                </div>
-                <div class="col-md-2"></div>
-   
-            </div>
+            <div id="paginaInicio"><h1>Bienvenidos a Gatolandia tu tienda online de cosas de gatos de confianza</h1></div>
             
 
             
