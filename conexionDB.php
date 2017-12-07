@@ -52,7 +52,7 @@ echo $count;
   
  
  
-  $_SESSION['datos'] =[$nombreUsuario, 0,0 ,0 ,0, 0, 0 ];
+  $_SESSION['datos'] =[$nombreUsuario];
         
         echo  $_SESSION['datos'];
  

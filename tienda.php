@@ -5,6 +5,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
+include 'carritoCompraFunciones.php';
+
 session_start(); //Iniciamos la Sesion o la Continuamos
 if (isset($_SESSION['datos'])!=null)
 {
@@ -167,6 +169,7 @@ if (isset($_SESSION['datos'])!=null)
             arrayJS[numero]=arrayJS[numero]+1;
             $('#pruebafuncion').html("<h1> Agregada una unidad al carrito </h1>"); 
             escribirDatos();
+         
         }
         
     }
@@ -174,7 +177,8 @@ if (isset($_SESSION['datos'])!=null)
         if(arrayJS[0]!=null){
             var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
             $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]+' Tiene: ' +suma+ ' articulos en su cesta</p>');
-        }
+            
+       }
     }
             
             
