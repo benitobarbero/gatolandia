@@ -149,18 +149,18 @@ if (isset($_SESSION['datos'])!=null)
             $('#pruebafuncion').html("<h1> Agregada una unidad al carrito </h1>"); 
             
             
-                $.ajax({
-                // En data puedes utilizar un objeto JSON, un array o un query string
-                data: {arrayJS},
-                //Cambiar a type: POST si necesario
-                type: "POST",
-                // Formato de datos que se espera en la respuesta
-                dataType: "json",
-                // URL a la que se enviará la solicitud Ajax
-                url: "carritoCompraFunciones.php",
-                 })
-            
-            
+//                $.ajax({
+//                // En data puedes utilizar un objeto JSON, un array o un query string
+//                data: {arrayJS},
+//                //Cambiar a type: POST si necesario
+//                type: "POST",
+//                // Formato de datos que se espera en la respuesta
+//                dataType: "json",
+//                // URL a la que se enviará la solicitud Ajax
+//                url: "carritoCompraFunciones.php",
+//                 })
+
+          
             escribirDatos();
       
 
