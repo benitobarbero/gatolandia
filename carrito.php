@@ -58,25 +58,12 @@ if (isset($_SESSION['datos'])!=null)
             <div id="cabeceraCarrito"></div>
             
             
-            <table style="width: 100%">
-            <tr>
-               <th>Articulo</th>
-               <th>Cantidad</th>
-               <th>Precio total</th>
-             </tr>
-             <div id="cuerpoCarrito">
-             <tr>
-                 <td rowspan="3">Todavia no tiene ningun articulo en la lista</td>
-       
-             </tr>
-             </div>
-             </table>
+           
+            <div id="cuerpoCarrito"><h3 class="text-center">Todavía no tiene ningun articulo en su cesta</h3></div>
+             
         </div>
         
-        
-        
-        
-        
+
          <script type="text/javascript">
             
            var arrayJS=<?php echo json_encode($datos);?>;
@@ -90,21 +77,25 @@ if (isset($_SESSION['datos'])!=null)
     
     
     function escribirCarrito(){
-        $('cabeceraCarrito').html("Bienvenido "+arrayJS[0]+" aqui tiene sus articulos");
+        $('#cabeceraCarrito').html("<h2 class='text-center'>Bienvenido "+arrayJS[0]+" aqui tiene sus articulos</h2>");
+        
+ $('#cuerpoCarrito').html("");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>NOMBRE ARTICULO </div><div class='col-md-3'> CANTIDAD </div><div class='col-md-3'> PRECIO </div></div>");
+      
         
         
         if(arrayJS[1]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 1</td><td>"+arrayJS[1]+"</td><td>"+(arrayJS[1]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 1 </div><div class='col-md-3'>"+arrayJS[1]+"</div><div class='col-md-3'>"+(arrayJS[1]*30)+" €</div></div>");
         if(arrayJS[2]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 2</td><td>"+arrayJS[2]+"</td><td>"+(arrayJS[2]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 2 </div><div class='col-md-3'>"+arrayJS[2]+"</div><div class='col-md-3'>"+(arrayJS[2]*30)+" €</div></div>");
         if(arrayJS[3]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 3</td><td>"+arrayJS[3]+"</td><td>"+(arrayJS[3]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 3 </div><div class='col-md-3'>"+arrayJS[3]+"</div><div class='col-md-3'>"+(arrayJS[3]*30)+" €</div></div>");
         if(arrayJS[4]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 4</td><td>"+arrayJS[4]+"</td><td>"+(arrayJS[4]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 4 </div><div class='col-md-3'>"+arrayJS[4]+"</div><div class='col-md-3'>"+(arrayJS[4]*30)+" €</div></div>");
         if(arrayJS[5]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 5</td><td>"+arrayJS[5]+"</td><td>"+(arrayJS[5]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 5 </div><div class='col-md-3'>"+arrayJS[5]+"</div><div class='col-md-3'>"+(arrayJS[5]*30)+" €</div></div>");
         if(arrayJS[6]!=0)
-        $('cuerpoCarrito').html(" <tr><td>Articulo 6</td><td>"+arrayJS[6]+"</td><td>"+(arrayJS[6]*30)+"</td></tr>");
+        $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Articulo 6 </div><div class='col-md-3'>"+arrayJS[6]+"</div><div class='col-md-3'>"+(arrayJS[6]*30)+" €</div></div>");
     
     }
     function escribirDatos(){
