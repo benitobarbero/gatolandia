@@ -148,7 +148,7 @@ if (isset($_SESSION['datos'])!=null)
         {
             var total = (arrayJS[1]*arrayPrecios[0])+(arrayJS[2]*arrayPrecios[1])+(arrayJS[3]*arrayPrecios[2])+(arrayJS[4]*arrayPrecios[3])+(arrayJS[5]*arrayPrecios[4])+(arrayJS[6]*arrayPrecios[5]);
             $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'></div><div class='row'><div class='col-md-3'></div><div class='row'><div class='col-md-3' style='text-align: left;'>Subtotal:  "+total+" €</div>");
-            $('#cuerpoCarrito').append("<br><br><button onclick = "location='compraFinal.html'" class='btn btn-danger btn-block'>COMPRAR</button>");
+            $('#cuerpoCarrito').append("<br><br><button onclick = 'location=\"compraFinal.php\"' class='btn btn-danger btn-block'>COMPRAR</button>");
             
         }
     }

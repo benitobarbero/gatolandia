@@ -46,11 +46,15 @@ session_start();
          echo "<br> aqui la query $queryCompras";
          $result = mysqli_query($conexion, $queryCompras);
          
-         //Reseteamos los valores a 0 por si quiere hacer otra compra
-         $queryCompras="INSERT INTO `compras` (`nombreusuario`, `cantidadArticulo1`, `cantidadArticulo2`, `cantidadArticulo3`, `cantidadArticulo4`, `cantidadArticulo5`, `cantidadArticulo6`) 
-         VALUES ('$nombreUsuarioBueno', '0', '0', '0', '0', '0', '0')";
-          echo "<br> aqui la query $queryCompras";
-         $result = mysqli_query($conexion, $queryCompras); 
+         
+         //Reseteamos las compras, para que pueda seguir comprando si quiere
+      $insertarCompra = "UPDATE `compras` SET `nombreusuario`='$nombreUsuarioBueno',`cantidadArticulo1`='0',`cantidadArticulo2`='0',`cantidadArticulo3`='0',". "`cantidadArticulo4`='0',`cantidadArticulo5`='0',`cantidadArticulo6`='0' WHERE `nombreusuario` = '$nombreUsuarioBueno'";
+         echo "<br> aqui la query $insertarCompra";
+         $result = mysqli_query($conexion, $insertarCompra);
+         
+         
+         print_r($result);
+         
          
         
          
