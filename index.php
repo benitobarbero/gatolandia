@@ -49,6 +49,7 @@ if (isset($_SESSION['datos'])!=null)
                       
                     </ul>
                       <div id="datosUsuario"> <p class="navbar-text" style="float: right;"></p></div>
+                      
                   </div>
                 </nav>
         </div>
@@ -57,10 +58,13 @@ if (isset($_SESSION['datos'])!=null)
         <div class="container">
  
             
-            <div id="paginaInicio"><h1>Bienvenidos a Gatolandia tu tienda online de cosas de gatos de confianza</h1></div>
+            <div id="paginaInicio" class="text-center"><h1>Bienvenidos a Gatolandia tu tienda online de cosas de gatos de confianza</h1></div>
             
-
             
+            <div clas="row">
+            <div class="col-md-3"></div>
+            <div id="contenedorGatoGigante"><img src="imagenes/gato_inicio.png" alt=""/></div>
+            </div>
             
             
         </div>
@@ -83,9 +87,10 @@ if (isset($_SESSION['datos'])!=null)
     
     function escribirDatos(){
         if(arrayJS[0]!=null){
-            var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
-            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]+' Tiene: ' +suma+ ' articulos en su cesta</p>');
-        }
+            //var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
+            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]);
+           
+       }
     }
             
             

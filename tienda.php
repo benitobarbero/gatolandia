@@ -67,20 +67,35 @@ if (isset($_SESSION['datos'])!=null)
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><button onclick='compraArticulo(1)' class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo01.jpg" class="img-responsive">
+                        <div class="tituloProducto">Juguete Rascador</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                
+                                <form action="carritoCompraFunciones2.php?id=1" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">15,00€</div></div>
+                                
                     </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><button onclick='compraArticulo(2)' class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo02.jpg" class="img-responsive">
+                        <div class="tituloProducto">Chucherias Rellenas</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                <form action="carritoCompraFunciones2.php?id=2" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">2,00€</div></div>
+                                
                     </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><button onclick='compraArticulo(3)' class="btn btn-danger btn-sm">COMPRAR</button></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo03.jpg" class="img-responsive">
+                        <div class="tituloProducto">Caseta Diseño</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                <form action="carritoCompraFunciones2.php?id=3" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">60,00€</div></div>
                     </div>
 
 
@@ -89,26 +104,38 @@ if (isset($_SESSION['datos'])!=null)
    
             </div>
             
-            
+           
             <!-- SEGUNDA FILA-->
                         <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick='compraArticulo(4)'>COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo04.jpg" class="img-responsive">
+                        <div class="tituloProducto">Pienso Adultos</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                <form action="carritoCompraFunciones2.php?id=4" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">30,00€</div></div>
                     </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 2</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick='compraArticulo(5)'>COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo05.jpg" class="img-responsive">
+                        <div class="tituloProducto">Pienso cachorros</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                <form action="carritoCompraFunciones2.php?id=5" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">15,00€</div></div>
                     </div>
-                    <div class="col-md-4  productbox">
-                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-                        <div class="producttitle">Product 3</div>
-                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button" onclick='compraArticulo(6)'>COMPRAR</a></div><div class="pricetext">30,00€</div></div>
+                    <div class="col-md-4  cajaProductos">
+                        <img src="imagenes/articulo06.jpg" class="img-responsive">
+                        <div class="tituloProducto">Rascador Vertical</div>
+                        <div class="precioProducto"><div class="pull-right">
+                                <form action="carritoCompraFunciones2.php?id=6" method="post">
+                                    <button type="submit" class="btn btn-danger btn-sm">COMPRAR</button>
+                                </form>
+                            </div><div class="textoPrecio">40,00€</div></div>
                     </div>
 
 
@@ -118,9 +145,7 @@ if (isset($_SESSION['datos'])!=null)
             </div>
          
 
-                        <div id="pruebafuncion"></div>
-            
-            
+
             
         </div>
         
@@ -160,6 +185,10 @@ if (isset($_SESSION['datos'])!=null)
 //                url: "carritoCompraFunciones.php",
 //                 })
 
+            
+            
+            
+           document.form1.submit();
           
             escribirDatos();
       
@@ -169,9 +198,9 @@ if (isset($_SESSION['datos'])!=null)
     }
     function escribirDatos(){
         if(arrayJS[0]!=null){
-            var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
-            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]+' Tiene: ' +suma+ ' articulos en su cesta</p>');
-            
+            //var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
+            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]);
+           
        }
     }
             

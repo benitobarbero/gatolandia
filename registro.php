@@ -57,10 +57,10 @@ if (isset($_SESSION['datos'])!=null)
         
         
   <div class="container">
-	<div class="row">
+	<div id="principal" class="row text-center">
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
-          <form class="form-horizontal" action="conexionDB.php" method="post">
+          <form class="form-horizontal" action="conexionDB2.php" method="post">
           <fieldset>
             <legend class="text-center">Registro</legend>
     
@@ -110,9 +110,13 @@ if (isset($_SESSION['datos'])!=null)
     
     function escribirDatos(){
         if(arrayJS[0]!=null){
-            var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
-            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]+' Tiene: ' +suma+ ' articulos en su cesta</p>');
-        }
+            //var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
+            $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]);
+           
+       }
+       
+       $('#principal').html("");
+       $('#principal').append("<h3 class='text-center'>Usted ya esta registrado, no puede hacerlo de nuevo</h3>");
     }
             
             

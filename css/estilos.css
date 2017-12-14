@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Raquel
 */
 
-.productbox {
+.cajaProductos {
     background-color:#ffffff;
 	padding:10px;
 	margin-bottom:10px;
@@ -17,17 +17,21 @@ and open the template in the editor.
 	        box-shadow: 0 8px 6px -6px #999;
 }
 
-.producttitle {
+.tituloProducto {
     font-weight:bold;
 	padding:5px 0 5px 0;
 }
 
-.productprice {
+.precioProducto {
 	border-top:1px solid #dadada;
 	padding-top:5px;
 }
 
-.pricetext {
+.textoPrecio {
 	font-weight:bold;
 	font-size:1.4em;
+}
+
+#contenedorGatoGigante{
+    align-content: center;
 }
