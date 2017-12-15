@@ -17,8 +17,8 @@ if (isset($_SESSION['datos'])!=null)
              
         //Aqui los datos de la base de datos
          $host_db = "localhost";
-         $user_db = "root";
-         $pass_db = "";
+         $user_db = "proyectoRaquel";
+         $pass_db = "1234";
          $db_name = "tiendaonline2";
          $tbl_name = "compras";
  
@@ -49,8 +49,7 @@ if (isset($_SESSION['datos'])!=null)
          
          $datos=[$nombreUsuarioBueno, $articulo1, $articulo2, $articulo3, $articulo4, $articulo5, $articulo6];
         
-        echo "hemos entrado y hecho todo, el usuario es: $nombreUsuarioBueno";
-        print_r($datos);
+       
         
 }
 
@@ -131,20 +130,20 @@ if (isset($_SESSION['datos'])!=null)
       
         
         
-        if(arrayJS[1]!==0)
+        if(arrayJS[1]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Juguete Rascador </div><div class='col-md-3'>"+arrayJS[1]+"</div><div class='col-md-3'>"+(arrayJS[1]*arrayPrecios[0])+" €</div></div>");
-        if(arrayJS[2]!==0)
+        if(arrayJS[2]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Chucherias Rellenas</div><div class='col-md-3'>"+arrayJS[2]+"</div><div class='col-md-3'>"+(arrayJS[2]*arrayPrecios[1])+" €</div></div>");
-        if(arrayJS[3]!==0)
+        if(arrayJS[3]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Caseta Diseño</div><div class='col-md-3'>"+arrayJS[3]+"</div><div class='col-md-3'>"+(arrayJS[3]*arrayPrecios[2])+" €</div></div>");
-        if(arrayJS[4]!==0)
+        if(arrayJS[4]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Pienso Adultos</div><div class='col-md-3'>"+arrayJS[4]+"</div><div class='col-md-3'>"+(arrayJS[4]*arrayPrecios[3])+" €</div></div>");
-        if(arrayJS[5]!==0)
+        if(arrayJS[5]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Pienso cachorros </div><div class='col-md-3'>"+arrayJS[5]+"</div><div class='col-md-3'>"+(arrayJS[5]*arrayPrecios[4])+" €</div></div>");
-        if(arrayJS[6]!==0)
+        if(arrayJS[6]!=0)
         $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'>Rascador Vertical</div><div class='col-md-3'>"+arrayJS[6]+"</div><div class='col-md-3'>"+(arrayJS[6]*arrayPrecios[5])+" €</div></div>");
     
-        if(arrayJS[1]!==0 || arrayJS[2]!==0 || arrayJS[3]!==0 || arrayJS[4]!==0 || arrayJS[5]!==0 || arrayJS[6]!==0)
+        if(arrayJS[1]!=0 || arrayJS[2]!=0 || arrayJS[3]!=0 || arrayJS[4]!=0 || arrayJS[5]!=0 || arrayJS[6]!=0)
         {
             var total = (arrayJS[1]*arrayPrecios[0])+(arrayJS[2]*arrayPrecios[1])+(arrayJS[3]*arrayPrecios[2])+(arrayJS[4]*arrayPrecios[3])+(arrayJS[5]*arrayPrecios[4])+(arrayJS[6]*arrayPrecios[5]);
             $('#cuerpoCarrito').append(" <div class='row'><div class='col-md-3'></div><div class='row'><div class='col-md-3'></div><div class='row'><div class='col-md-3' style='text-align: left;'>Subtotal:  "+total+" €</div>");
@@ -153,7 +152,7 @@ if (isset($_SESSION['datos'])!=null)
         }
     }
      function escribirDatos(){
-        if(arrayJS[0]!==null)
+        if(arrayJS[0]!=null)
         {
             //var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
             $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]);

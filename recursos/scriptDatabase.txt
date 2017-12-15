@@ -1,0 +1,21 @@
+SCRIPT Creacion de la database
+
+
+
+CREATE USER 'proyectoRaquel'@'localhost' IDENTIFIED BY '1234';GRANT ALL PRIVILEGES ON *.* TO 'proyectoRaquel'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+
+CREATE DATABASE `tiendaonline2`; 
+CREATE TABLE `tiendaonline2`.`usuarios` ( `username` VARCHAR(64) NOT NULL , `password` VARCHAR(32) NOT NULL );
+CREATE TABLE `tiendaonline2`.`compras` ( `nombreusuario` VARCHAR(64) NOT NULL , `cantidadArticulo1` INT(4) NOT NULL , `cantidadArticulo2` INT(4) NOT NULL , `cantidadArticulo3` INT(4) NOT NULL , `cantidadArticulo4` INT(4) NOT NULL , `cantidadArticulo5` INT(4) NOT NULL , `cantidadArticulo6` INT(4) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `tiendaonline2`.`comprasFinales` ( `nombreusuario` VARCHAR(64) NOT NULL , `cantidadArticulo1` INT(4) NOT NULL , `cantidadArticulo2` INT(4) NOT NULL , `cantidadArticulo3` INT(4) NOT NULL , `cantidadArticulo4` INT(4) NOT NULL , `cantidadArticulo5` INT(4) NOT NULL , `cantidadArticulo6` INT(4) NOT NULL ) ENGINE = InnoDB;
+
+
+
+
+
+
+
+
+DROP DATABASE  `tiendaonline2`; 
+DROP USER 'proyectoRaquel'@'localhost';

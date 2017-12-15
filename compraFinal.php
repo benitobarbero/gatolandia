@@ -4,17 +4,16 @@ session_start();
        $arrayDatos= $_SESSION['datos'];
        $nombreUsuarioBueno=$arrayDatos[0];
        
-       echo $nombreUsuarioBueno;
+       
         //Aqui los datos de la base de datos
          $host_db = "localhost";
-         $user_db = "root";
-         $pass_db = "";
+         $user_db = "proyectoRaquel";
+         $pass_db = "1234";
          $db_name = "tiendaonline2";
          $tbl_name = "compras";
  
  
-        // $nomUsuario=$_GET['usuario'];
-         $articuloCompra=$_GET['id'];
+       
  
          $conexion = mysqli_connect($host_db, $user_db, $pass_db, $db_name);
  
@@ -26,7 +25,7 @@ session_start();
  
          $result = mysqli_query($conexion, $buscarCompra);
          $result = mysqli_fetch_array($result);
-         print_r($result);
+         
          
          
          //Nos guardamos el resultado de la consulta
@@ -43,17 +42,17 @@ session_start();
          VALUES ('$nombreUsuarioBueno', '$articulo1', '$articulo2', '$articulo3', '$articulo4', '$articulo5', '$articulo6')";
          
          
-         echo "<br> aqui la query $queryCompras";
+         
          $result = mysqli_query($conexion, $queryCompras);
          
          
          //Reseteamos las compras, para que pueda seguir comprando si quiere
       $insertarCompra = "UPDATE `compras` SET `nombreusuario`='$nombreUsuarioBueno',`cantidadArticulo1`='0',`cantidadArticulo2`='0',`cantidadArticulo3`='0',". "`cantidadArticulo4`='0',`cantidadArticulo5`='0',`cantidadArticulo6`='0' WHERE `nombreusuario` = '$nombreUsuarioBueno'";
-         echo "<br> aqui la query $insertarCompra";
+         
          $result = mysqli_query($conexion, $insertarCompra);
          
          
-         print_r($result);
+         
          
          
         
@@ -107,6 +106,26 @@ session_start();
             <div id="cuerpoCarrito" class="text-center"><h3 class="text-center">Su compra se ha realizado Correctamente y ha pasado a la base de datos de pedidos pendiente</h3></div>
              
         </div>
+        
+        
+        
+                 <script type="text/javascript">
+            
+            var arrayJS=<?php echo json_encode( $arrayDatos);?>;
+
+           escribirDatos();
+
+            function escribirDatos(){
+               if(arrayJS[0]!=null)
+               {
+                   //var suma = arrayJS[1]+arrayJS[2]+arrayJS[3]+arrayJS[4]+ arrayJS[5]+arrayJS[6];
+                   $('#datosUsuario').html('<p class="navbar-text" style="float: right;"> Bienvenido: '+arrayJS[0]);
+
+              }
+           }
+            
+            
+        </script>
         
         
     </body>

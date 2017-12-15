@@ -7,8 +7,8 @@ session_start();
        echo $nombreUsuarioBueno;
         //Aqui los datos de la base de datos
          $host_db = "localhost";
-         $user_db = "root";
-         $pass_db = "";
+         $user_db = "proyectoRaquel";
+         $pass_db = "1234";
          $db_name = "tiendaonline2";
          $tbl_name = "compras";
  

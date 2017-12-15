@@ -7,8 +7,8 @@ and open the template in the editor.
 <?php
 
  $host_db = "localhost";
- $user_db = "root";
- $pass_db = "";
+ $user_db = "proyectoRaquel";
+ $pass_db = "1234";
  $db_name = "tiendaonline2";
  $tbl_name = "usuarios";
  
